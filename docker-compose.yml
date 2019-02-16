@@ -1,0 +1,27 @@
+version: "3"
+services:
+  db:
+    image: mariadb:10
+    container_name: db
+    ports:
+      - 3333:3306
+    volumes:
+      - db:/var/lib/mysql
+    env_file: ./database.env
+
+  linux:
+    build: ./linux
+    links:
+      - db:database-service
+    env_file: 
+      - ./database.env
+      - ./darkstar.env
+    ports:
+      - 54230
+      - 54231
+      - 54001
+      - 54002
+    tty: true
+
+volumes:
+    db:
