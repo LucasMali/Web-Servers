@@ -1,7 +1,7 @@
 # darkstardocker
 A docker implementation for darkstar.
 
-## TODO: (Oh this list is going to be long so in the near future)
+## TODO: (Oh this list is going to be long, so for now, only in the near future)
 - Solve the g++ std=c++17 lib issue (preventing compleation of the compile).
 - Get ENTRYPOINT ["/docker-entrypoint.sh"] working so it will auto-launch the script with the environmental variables. 
 - Make the Darkstar LUA configurations into accessible volumes.
