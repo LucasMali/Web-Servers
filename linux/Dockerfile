@@ -27,9 +27,7 @@ RUN apt-get update \
     g++
 
 
-WORKDIR ~/
-RUN git clone https://github.com/DarkstarProject/darkstar.git
-
+WORKDIR /
 ADD docker-entrypoint.sh docker-entrypoint.sh
 RUN ./docker-entrypoint.sh
     

@@ -4,7 +4,7 @@ services:
     image: mariadb:10
     container_name: db
     ports:
-      - 3333:3306
+      - 3306
     volumes:
       - db:/var/lib/mysql
     env_file: ./database.env
@@ -15,12 +15,8 @@ services:
       - db:database-service
     env_file: 
       - ./database.env
-      - ./darkstar.env
     ports:
-      - 54230
-      - 54231
-      - 54001
-      - 54002
+      - 80
     tty: true
 
 volumes:
