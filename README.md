@@ -19,7 +19,13 @@ docker-compose up
 ```
 
 Currently, until the entry point of installation is fixed; Once up, log-into the linux_darkstar container. After you are in the
-bash, you can attempt to run ./docker-entrypoint.sh to set up the DB and compile.
+bash, you can attempt to run ./docker-entrypoint.sh to set up the DB and compile. 
 
 ### NOTE:
 the darkstar.env configurations will set if the server will get compiled or DB is installed, so before you 'up' change those values to true.
+
+### How to get into docker bash?
+```
+docker exec -i -t container_name /bin/bash
+```
+https://askubuntu.com/questions/505506/how-to-get-bash-or-ssh-into-a-running-container-in-background-mode
